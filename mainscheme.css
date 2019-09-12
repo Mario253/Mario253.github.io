@@ -14,3 +14,15 @@ p {
 iframe {
   border: 0;
 }
+
+nav {
+  float: right;
+}
+
+a:link {
+  color: #d6751b;
+}
+
+a:visited {
+  color: #c4f18e;
+}
