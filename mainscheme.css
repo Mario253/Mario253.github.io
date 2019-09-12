@@ -10,3 +10,7 @@ h1 {
 p {
   color: #76c318;
 }
+
+iframe {
+  border: 0;
+}
