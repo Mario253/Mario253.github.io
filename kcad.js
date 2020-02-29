@@ -6,8 +6,8 @@ class Ability {
 	}
 
 	print() {
-		document.getElementById("popup").classList.toggle("show");
-		document.getElementById("popup").innerHTML = "Name: " + this._name + "<br />Description: " + this._description + "<br />Enemies: " + this._enemies;
+		document.getElementById("text").classList.toggle("show");
+		document.getElementById("text").innerHTML = "Name: " + this._name + "<br />Description: " + this._description + "<br />Enemies: " + this._enemies;
 	}
 }
 
