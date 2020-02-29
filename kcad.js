@@ -6,9 +6,8 @@ class Ability {
 	}
 
 	print() {
-		document.getElementById("infobox").innerHTML = "<p>Name: " + this._name + "<br />Description: " + this._description + "<br />Enemies: " + this._enemies;
+		document.getElementById("popup").innerHTML = "Name: " + this._name + "<br />Description: " + this._description + "<br />Enemies: " + this._enemies;
 	}
 }
 
 var test = new Ability("test", "test ability", ["no ", "enemies"]);
-test.print();

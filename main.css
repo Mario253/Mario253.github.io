@@ -1,0 +1,46 @@
+#infobox {
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#popup {
+	visibility: hidden;
+	background-color: #e5ed00;
+	width: 160px;
+	color: #000000;
+	text-align: center;
+	z-index: 1;
+	position: absolute;
+	bottom: -200%;
+	left: 50%;
+	margin-left: -80px;
+}
+
+#infobox #popup::after {
+	content: "";
+	position: absolute;
+	top: 100%;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 0px;
+	border-style: solid;
+	border-color: #555555 transparent transparent transparent;
+}
+
+#infobox .show {
+	visibility: visible
+	-webkit-animation: fadeIn 1s;
+	animation: fadeIn 1s;
+}
+
+@-webkit-keyframes fadeIn {
+	from: {opacity: 0;}
+	to: {opacity: 1;}
+}
+
+@keyframes fadeIn {
+	from: {opacity: 0;}
+	to: {opacity: 1;}
+}
