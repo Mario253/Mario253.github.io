@@ -17,14 +17,14 @@ body {
 .popuptext {
 	visibility: hidden;
 	background-color: #e5ed00;
-	width: 160px;
 	color: #000000;
 	text-align: center;
 	z-index: 1;
-	position: absolute;
-	bottom: -100%;
+	position: fixed;
+	top: 50%;
 	left: 50%;
-	margin-left: -80px;
+	transform: translate(-50%, -50%);
+	width: 25%;
 }
 
 .popup .show {

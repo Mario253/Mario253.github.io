@@ -7,8 +7,8 @@ class Ability {
 
 	print() {
 		document.getElementById("text").classList.toggle("show");
-		document.getElementById("text").innerHTML = "Name: " + this._name + "<br />Description: " + this._description + "<br />Enemies: " + this._enemies;
+		document.getElementById("text").innerHTML = "<strong>Name</strong>: " + this._name + "<br /><strong>Description</strong>: " + this._description + "<br /><strong>Enemies</strong>: " + this._enemies;
 	}
 }
 
-var animal = new Ability("Animal", "'You love dirt! DIG ! Sweet dirt! DIG! DIG! DIG! DIG!! Can't dig everywhere...' -Kirby: Squeak Squad", ["Gaw Gaw", "Spinni's metal claw (midboss)", "Gao Gao (midboss)"]);
+var animal = new Ability("Animal", "'You love dirt! DIG! Sweet dirt! DIG! DIG! DIG! DIG!! Can't dig everywhere...' -Kirby: Squeak Squad", ["Gaw Gaw", " <em>Spinni</em>'s metal claw", " <em>Gao Gao</em>"]);
