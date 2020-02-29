@@ -22,7 +22,7 @@ body {
 	text-align: center;
 	z-index: 1;
 	position: absolute;
-	bottom: -200%;
+	bottom: -100%;
 	left: 50%;
 	margin-left: -80px;
 }
