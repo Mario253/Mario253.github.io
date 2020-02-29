@@ -11,4 +11,4 @@ class Ability {
 	}
 }
 
-var test = new Ability("test", "test ability", ["no ", "enemies"]);
+var animal = new Ability("Animal", "'You love dirt! DIG ! Sweet dirt! DIG! DIG! DIG! DIG!! Can't dig everywhere...' -Kirby: Squeak Squad", ["Gaw Gaw", "Spinni's metal claw (midboss)", "Gao Gao (midboss)"]);
