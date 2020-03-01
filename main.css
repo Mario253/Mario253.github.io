@@ -1,7 +1,15 @@
 body {
-	font-family: "Amaranth", "Arial", sans-serif;
+	font-family: "Arial", sans-serif;
 	background-color: #fc8397;
 	text-align: center;
+}
+
+h1 {
+	font-size: 3.5em;
+}
+
+p {
+	font-size: 120%;
 }
 
 .popup {
@@ -48,4 +56,8 @@ span img {
 table {
 	margin-left: auto;
 	margin-right: auto;
+}
+
+h2 {
+	font-size: 215%;
 }
