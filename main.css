@@ -25,9 +25,15 @@ body {
 	left: 50%;
 	transform: translate(-50%, -50%);
 	width: 25%;
+	border-style: solid;
+	border-color: #00c2fc;
+	border-width: 5px;
 }
 
 .popup .show {
-	visibility: visible
+	visibility: visible;
 }
 
+.smalltext {
+	font-size: 0.75em;
+}
