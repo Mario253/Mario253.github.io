@@ -43,6 +43,9 @@ p {
 	.popuptext {
 		width: 25%;
 	}
+	body {
+		font-size: 1.5em;
+	}
 }
 .popup .show {
 	visibility: visible;
