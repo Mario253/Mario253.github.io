@@ -22,6 +22,7 @@ p {
 	cursor: pointer;
 }
 
+
 .popuptext {
 	visibility: hidden;
 	background-color: #e5ed00;
@@ -32,12 +33,17 @@ p {
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	width: 25%;
+	width: 50%;
 	border-style: solid;
 	border-color: #00c2fc;
 	border-width: 5px;
 }
 
+@media only screen and (orientation: landscape) {
+	.popuptext {
+		width: 25%;
+	}
+}
 .popup .show {
 	visibility: visible;
 }
