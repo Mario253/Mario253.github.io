@@ -37,14 +37,14 @@ p {
 	border-style: solid;
 	border-color: #00c2fc;
 	border-width: 5px;
+	body {
+		font-size: 1.5em;
+	}
 }
 
 @media only screen and (orientation: landscape) {
 	.popuptext {
 		width: 25%;
-	}
-	body {
-		font-size: 1.5em;
 	}
 }
 .popup .show {
