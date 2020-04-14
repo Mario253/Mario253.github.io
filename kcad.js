@@ -113,7 +113,9 @@ var final_abil = {
 	"RobobotHalberd": new Ability("RobobotHalberd", "'The Robobot Armor has scanned Meta Knight's ship! It's equipped with the Planet Buster. Capture debris, and press A to fire it!' -Kirby: Planet Robobot", ["Mandatory final weapon"], ["Kirby: Planet Robobot"]),
 	"Starship": new Ability("Starship", "'The lights of the starry path cross and a Starship appears! Now stop Marx's mad plan!' -Kirby Super Star Ultra", ["Mandatory final weapon"], ["Kirby Super Star", "Kirby Super Star Ultra"]),
 	"StarRod": new Ability("StarRod", "'This suddenly appeared at the Fountain of Dreams. Use it in your final battle against the Nightmares!' -Kirby: Nightmare in Dream Land", ["Mandatory final weapon"], ["Kirby's Adventure", "Kirby: Nightmare in Dream Land"]),
-	"TripleStar": new Ability("TripleStar", "'What else needs saying?<br /><strong>TRIPLE STAR</strong><br />That's what you are. Amazing!' -Kirby: Squeak Squad", ["Optional final weapon"], ["Kirby: Squeak Squad"])
+	"TripleStar": new Ability("TripleStar", "'What else needs saying?<br /><strong>TRIPLE STAR</strong><br />That's what you are. Amazing!' -Kirby: Squeak Squad", ["Optional final weapon"], ["Kirby: Squeak Squad"]),
+	"Landia": new Ability("Landia", "'Landia to the rescue in Planet Popstar's - no, the entire universe's - time of need! Joining up with Kirby, the dragon takes to battle!' -Kirby's Return to Dream Land", ["Mandatory final weapon/vehicle"], ["Kirby's Return to Dream Land (as a weapon, appears as a boss elsewhere"]),
+	"StarAlliesSparkler": new Ability("StarAlliesSparkler", "'Star Allies Sparkler is a secret technique based on the warmth of giving hearts. The desire to save everyone in the galaxy transforms into a sparkling star... which heads straight for the final boss!' -Kirby Star Allies", ["Mandatory final weapon"], ["Kirby Star Allies"])
 };
 
 var mix64_abil = {
