@@ -152,7 +152,7 @@ var limit_div = document.getElementById("limit_abil");
 var super_div = document.getElementById("super_abil");
 var final_div = document.getElementById("final_abil");
 var mix64_div = document.getElementById("mix64_abil");
-var mixDS_div = document.getElementById("mixDS_abil");
+// var mixDS_div = document.getElementById("mixDS_abil");
 
 var normaltext, smalltext;
 var abil;
@@ -236,6 +236,7 @@ for (abil in mix64_abil) {
 	}
 }
 
+/*
 for (abil in mixDS_abil) {
 	normaltext = (`<span class="popup" onclick="mixDS_abil['` + mixDS_abil[abil].name + `'].print();">
 		<img src="images/` + mixDS_abil[abil].name + `.png" alt="` + mixDS_abil[abil].name + ` icon" width="150" />
@@ -251,3 +252,4 @@ for (abil in mixDS_abil) {
 		mixDS_div.innerHTML += normaltext;
 	}
 }
+*/
