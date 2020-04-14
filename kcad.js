@@ -1,13 +1,18 @@
 class Ability {
-	constructor(name, description, accessed, games) {
+	constructor(name, description, accessed, games, smalltext = false) {
 		this._name = name;
 		this._description = description;
 		this._accessed = accessed;
 		this._games = games;
+		this._smalltext = smalltext;
 	}
 
 	get name() {
 		return this._name;
+	}
+
+	get smalltext() {
+		return this._smalltext;
 	}
 
 	print() {
@@ -32,7 +37,7 @@ var norm_abil = {
 	"Beam": new Ability("Beam", "'This crackling attack unleashes a ton of energy. Shoot a Cycle Beam or fire a Beam Blast from midair! And if you need to electrify your friends' weapons in a flash, use the rapid fire Wave Beam!' -Kirby Star Allies", ["Gemra", " Laser Ball", " Metal Bit", " Waddle Doo", " <em>King Doo</em>"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Canvas Curse", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby Fighers Deluxe", " Kirby: Planet Robobot", " Team Kirby Clash Deluxe", " Kirby Star Allies", " Super Kirby Clash"]),
 	"Beetle": new Ability("Beetle", "'A flash of light reflects off its horn as the king of bugs soars through the sky! After charging your enemies to grab them with your horn, you can slam them into the ground!' -Kirby Triple Deluxe", ["Beetley", " <em>Hornhead</em>"], ["Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby Battle Royale", " Kirby Star Allies"]),
 	"Bell": new Ability("Bell", "'Ring dong, ding dong! It's a golden bell. Shake it, and a strange tone issues forth. Talk about stunning conclusions--get a load of the Ding Finale!' -Kirby Triple Deluxe", ["Ringle"], ["Kirby Triple Deluxe", " Kirby Fighters Deluxe"]),
-	"Bomb": new Ability("Bomb", "'Grab a bomb and hold the button to set the throw angle. Toss it and it'll go Ka-BOOM!' -Kirby Super Star Ultra", ["Bronto Burt's bombs", " Bomb Poppy Bros. Jr.", " Jungle Bomb", " Skud", " Pedo", " Rockn", " Balloon Bomber", " Foley", " Prank", " Bomb Perot", " Volm", " <em>Miracle Matter</em>'s bombs", " <em>Mr. Dooter</em>'s bombs", " <em>Metal General</em>'s missiles", " <em>Moley</em>'s bombs", " <em>Wiz</em>'s bombs", " <em>(Dark) Daroach</em>'s bombs", " <em>Clanky Woods</em>'s missiles", " <em>Susie</em>'s missiles"], ["Kirby Super Star", " Kirby 64: The Crystal Shards", " Kirby Air Ride", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return To Dream Land", " Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"]),
+	"Bomb": new Ability("Bomb", "'Grab a bomb and hold the button to set the throw angle. Toss it and it'll go Ka-BOOM!' -Kirby Super Star Ultra", ["Bronto Burt's bombs", " Bomb Poppy Bros. Jr.", " Jungle Bomb", " Skud", " Pedo", " Rockn", " Balloon Bomber", " Foley", " Prank", " Bomb Perot", " Volm", " <em>Miracle Matter</em>'s bombs", " <em>Mr. Dooter</em>'s bombs", " <em>Metal General</em>'s missiles", " <em>Moley</em>'s bombs", " <em>Wiz</em>'s bombs", " <em>(Dark) Daroach</em>'s bombs", " <em>Clanky Woods</em>'s missiles", " <em>Susie</em>'s missiles"], ["Kirby Super Star", " Kirby 64: The Crystal Shards", " Kirby Air Ride", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return To Dream Land", " Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"], true),
 	"Bubble": new Ability("Bubble", "'Mysterious bubbles can capture so much.' -Kirby: Squeak Squad", ["Bubble Head", " <em>Buboo</em>"], ["Kirby: Squeak Squad"]),
 	"Burning": new Ability("Burning", "'Kirby can turn into a flying fireball! Jump and attack in a flash of fire!' -Kirby's Adventure", ["Flamer", " Bobo", " Burnis", " Galbo", " Magoo", " Transformer", " Bukiset (fire sword)", " <em>Fire Lion</em>", " <em>Batafire</em>", " <em>Efrite</em>", " <em>Boboo</em>", " <em>Master Hand</em>'s bullets", " <em>Mr. Bright</em>'s stars", " <em>Miracle Matter</em>'s fireballs", " <em>Master & Crazy Hand<em>'s bullets", " <em>Moley</em>'s oil cans"], ["Kirby's Adventure", " Kirby's Dream Course", " Kirby's Dream Land 2", " Kirby's Block Ball", " Kirby's Dream Land 3", " Kirby 64: The Crystal Shards", " Kirby: Nightmare In Dream Land", " Kirby & The Amazing Mirror", " Kirby: Canvas Curse"]),
 	"Circus": new Ability("Circus", "'Is this for real? You bet it is! Jump through a flaming hoop, and show off your finest Acrobatics! After the curtains close on your foes, they'll know the clown arts are no joke.' -Kirby Triple Deluxe", ["Clown Acrobot"], ["Kirby Triple Deluxe", " Kirby: Planet Robobot"]),
@@ -48,7 +53,7 @@ var norm_abil = {
 	"Ghost": new Ability("Ghost", "'I will possess... I will control... I'm a spooky soul... I'm not scary, though. Right?' -Kirby: Squeak Squad", ["<em>Tedhaun</em>"], ["Kirby: Squeak Squad"]),
 	"Hammer": new Ability("Hammer", "'A giant hammer inherited from the king himself that can pound pegs flat! You can charge it up for a pulverizing blow, but be careful not to overdo it. Imbue it with a friend's power and use it to fight!' -Kirby Star Allies", ["Dygclops (orange)", " <em>Bonkers", " Masked Dedede</em> (start of fight)"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby: Planet Robobot", " Team Kirby Clash Deluxe", " Kirby Battle Royale", " Kirby Star Allies", " Super Kirby Clash"]),
 	"Hi-Jump": new Ability("Hi-Jump", "'Leap into the air with a Hi-Jump! Zoom back down with an unstoppable high-speed Rocket Dive! A hero has made his debut!' -Kirby's Return to Dream Land", ["Starman", " Transformer"], ["Kirby's Adventure", " Kirby's Dream Course", " Kirby: Nightmare in Dream Land", " Kirby: Squeak Squad", " Kirby's Return to Dream Land"]),
-	"Ice": new Ability("Ice", "'Freeze enemies with Ice Breath, and then send them packing with an Ice Kick! You can also glide gracefully along the ground with Ice Skate.' -Kirby Triple Deluxe", ["Pengi", " Master Pengi", " Frigis", " Snowl", " Emp", " Wappa", " Prank", " Bukiset (ice sword", " Antler (white)", " Shield Guard's blizzard shield", " Propeller", " Chilly", " <em>Yuki", " Mr. Frosty", " Ice Sphere Doomer", " Miracle Matter</em>'s ice crystals", " <em>Dark Mind</em>'s blue stars", " <em>Goliath</em>'s snowballs"], ["Kirby's Adventure", " Kirby's Dream Land 2", " Kirby Super Star", " Kirby's Dream Land 3", " Kirby 64: The Crystal Shards", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"]),
+	"Ice": new Ability("Ice", "'Freeze enemies with Ice Breath, and then send them packing with an Ice Kick! You can also glide gracefully along the ground with Ice Skate.' -Kirby Triple Deluxe", ["Pengi", " Master Pengi", " Frigis", " Snowl", " Emp", " Wappa", " Prank", " Bukiset (ice sword", " Antler (white)", " Shield Guard's blizzard shield", " Propeller", " Chilly", " <em>Yuki", " Mr. Frosty", " Ice Sphere Doomer", " Miracle Matter</em>'s ice crystals", " <em>Dark Mind</em>'s blue stars", " <em>Goliath</em>'s snowballs"], ["Kirby's Adventure", " Kirby's Dream Land 2", " Kirby Super Star", " Kirby's Dream Land 3", " Kirby 64: The Crystal Shards", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"], true),
 	"Jet": new Ability("Jet", "'This high-flying ability full of aerodynamic power makes its return! Charge it up with B, and then jet toward enemies at extreme speed!' -Kirby: Planet Robobot", ["Capsule J/J2/J3"], ["Kirby Super Star", " Kirby Super Star Ultra", " Kirby: Planet Robobot"]),
 	"Laser": new Ability("Laser", "'Kirby can fire a laser beam! This beam will bounce off slopes, so try it in many places!' -Kirby's Adventure", ["Laser Ball", " Metal Guardian"], ["Kirby's Adventure", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad"]),
 	"Leaf": new Ability("Leaf", "'It's time to dance! The Leaf Dance creates a gorgeous swirl of razor-edged leaves. Press A to Guard, and...huh?! You're gone!' -Kirby's Return to Dream Land", ["Bulby", " Leafran"], ["Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot"]),
@@ -57,11 +62,11 @@ var norm_abil = {
 	"Missile": new Ability("Missile", "'Transform into a missile and fly through the sky. Watch out: you'll blow up if you hit an enemy or a wall.' -Kirby & The Amazing Mirror", ["Bang-Bang", " <em>Bombar</em>"], ["Kirby & The Amazing Mirror", " Kirby: Canvas Curse"]),
 	"Needle": new Ability("Needle", "'Cover yourself in pointy needles to poke your enemies and attach to walls! You can also poke needles into the ceiling and floor!' -Kirby Triple Deluxe", ["Needlous", " Togezo", " Tick", " Boten", " Punc", " Pichikuri", " Spikey", " Ghost Knight", " Kacti", " Transformer", " Bukiset (lance)", " Togekuki", " <em>Captain Stitch", " Miracle Matter</em>'s thorns"], ["Kirby's Adventure", " Kirby's Dream Course", " Kirby's Dream Land 2", " Kirby's Block Ball", " Kirby's Dream Land 3", " Kirby 64: The Crystal Shards", " Kirby: Nightmare in Dream Land", " Kirby Air Ride", " Kirby: Canvas Curse", " Kirby's Return to Dream Land", " Kirby Triple Deluxe"]),
 	"Ninja": new Ability("Ninja", "'Reinforcements have been called in from a nearby ninja village! Slide into the shadows, and vanish in the darkness. When the time is right, unleash the Blossom Storm technique!' -Kirby Triple Deluxe", ["Bio Shock", " Moonja", " <em>Spinni</em>'s shurikens</em>"], ["Kirby Super Star", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"]),
-	"Parasol": new Ability("Parasol", "'Guard against falling objects, or take a floaty stroll through the air. You can also spray water to attack enemies or put out fires. For your grand finale, use a Circus Throw!' -Kirby Triple Deluxe", ["Parasol Drifter", " Parasol Waddle Dee/Doo", " Bukiset (umbrella)", " Sasuke", " Klinko", " Transformer", " Shotzos (w/ parasol)", " <em>Jumpershot", " Paint Roller</em>'s drawn parasol"], ["Kirby's Adventure", " Kirby's Dream Land 2", " Kirby Super Star", " Kirby's Dream Course", " Kirby's Dream Land 3", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"]),
+	"Parasol": new Ability("Parasol", "'Guard against falling objects, or take a floaty stroll through the air. You can also spray water to attack enemies or put out fires. For your grand finale, use a Circus Throw!' -Kirby Triple Deluxe", ["Parasol Drifter", " Parasol Waddle Dee/Doo", " Bukiset (umbrella)", " Sasuke", " Klinko", " Transformer", " Shotzos (w/ parasol)", " <em>Jumpershot", " Paint Roller</em>'s drawn parasol"], ["Kirby's Adventure", " Kirby's Dream Land 2", " Kirby Super Star", " Kirby's Dream Course", " Kirby's Dream Land 3", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby Fighters Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"], true),
 	"Plasma": new Ability("Plasma", "'The supercharged Plasma Ability returns! Waggle the control stick to build up energy, then fire it off. You can even shoot upwards! You can also zap your friends' weapons with a mighty jolt to grant them extra shocking powers!' -Kirby Star Allies", ["Plasma Whip", " Plugg", " <em>Zan Partizanne</em>'s electric beam", " <em>Hyness</em>'s lightning pillar"], ["Kirby Super Star", " Kirby Air Ride", " Kirby Super Star Ultra", " Kirby Star Allies"]),
 	"Poison": new Ability("Poison", "'This dangerous ability can be used to attack enemies with a corrosive liquid that damages organic and inorganic forms alike.' -Kirby: Planet Robobot", ["Dacooga", " Venog", " <em>Miasmoros</em>"], ["Kirby: Planet Robobot"]),
 	"SmashBros": new Ability("SmashBros", "'You're ready to rumble! You got the Smash Bros. ability!' -Kirby: Planet Robobot", ["<em>Master Hand</em>"], ["Kirby & The Amazing Mirror", " Kirby: Planet Robobot"]),
-	"Spark": new Ability("Spark", "'Mash on the +Control Pad, charge up your power, and create an energy barrier! With the Spark ability, you can even fire plasma shots!' -Kirby: Planet Robobot", ["Antler", " Bobin", " Bukiset (yellow wand)", " Dubior Jr.", " Elec", " Haltworker", " Pata", " Plugg", " Spark-i", " Sparky", " Transformer", " Turbite", " Zoos", " <em>Dubior", " Master Green", " Spark Sphere Doomer</em>'s energy balls", " <em>Telepathos</em>'s psychic blasts", " <em>Security Force</em>'s drones", " <em>Paint Roller</em>'s cloud", " <em>Metal General</em>'s spark mines", " <em>Miracle Matter</em>'s sparks"], ["Kirby's Adventure", " Kirby's Dream Course", " Kirby's Dream Land 2", " Kirby's Block Ball", " Kirby's Dream Land 3", " Kirby 64: The Crystal Shards", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Canvas Curse", " Kirby: Squeak Squad", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot"]),
+	"Spark": new Ability("Spark", "'Mash on the +Control Pad, charge up your power, and create an energy barrier! With the Spark ability, you can even fire plasma shots!' -Kirby: Planet Robobot", ["Antler", " Bobin", " Bukiset (yellow wand)", " Dubior Jr.", " Elec", " Haltworker", " Pata", " Plugg", " Spark-i", " Sparky", " Transformer", " Turbite", " Zoos", " <em>Dubior", " Master Green", " Spark Sphere Doomer</em>'s energy balls", " <em>Telepathos</em>'s psychic blasts", " <em>Security Force</em>'s drones", " <em>Paint Roller</em>'s cloud", " <em>Metal General</em>'s spark mines", " <em>Miracle Matter</em>'s sparks"], ["Kirby's Adventure", " Kirby's Dream Course", " Kirby's Dream Land 2", " Kirby's Block Ball", " Kirby's Dream Land 3", " Kirby 64: The Crystal Shards", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Canvas Curse", " Kirby: Squeak Squad", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot"], true),
 	"Spear": new Ability("Spear", "'The spear is a true warrior's weapon. Multispear Attack! Spear Throw! Moon Drop! The spear ability puts all these moves and more at your disposal. You can even use the spear underwater!' -Kirby Triple Deluxe", ["Pierce", " Lanzer"], ["Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby Battle Royale"]),
 	"Spider": new Ability("Spider", "'What predator is more impressive? None shall escape such a hunter! You can spin threads with skill to execute the Friend Bounce, which will get your friends up high. Ready, set...jump!' -Kirby Star Allies", ["Como"], ["Kirby Star Allies"]),
 	"Staff": new Ability("Staff", "'Become a staff-wielding martial artist and mow down your enemies! The product of a strange land, this staff is the ultimate telescoping weapon that extends to let you pole-vault over obstacles.' -Kirby Star Allies", ["Jammerjab"], ["Kirby Star Allies"]),
@@ -79,14 +84,14 @@ var norm_abil = {
 };
 
 var limit_abil = {
-	"Cook": new Ability("Cook", "'What's on today's menu? Put all your foes in the pot and stew them to perfection!' -Kirby Super Star Ultra", ["Cookin", " Prank", " <em>Chef Kawasaki</em>"], ["Kirby Super Star", " Kirby & The Amazing Mirror", " Kirby Super Star Ultra", " Kirby Star Allies<br /><img src='images/cook_art.png' alt='Cook Kirby' />"]),
-	"Crash": new Ability("Crash", "'DANGER! Use caution when handling this ability. It can only be used once, so make it count!' -Kirby: Planet Robobot", ["Bomber", " Searches", " Scarfy", " Mr. Anglep (Copy)", " <em>Poppy Bros Sr.", " Dark Mind</em>'s bomb", " <em>Paint Roller</em>'s bomb", " <em>Metal General</em>'s huge mistake"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Canvas Curse", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Star Allies<br /><img src='images/crash_art.png' alt='Crash Kirby' />"]),
-	"Festival": new Ability("Festival", "'Honk, toot, and bammity-bam! Bust out a festival of drums and horns, which makes everyone break into a wild dance! Gather your all-star friends and have a party!' -Kirby Star Allies", ["Donpuffle", " <em>Yggy Woods</em>'s golden cherries"], ["Kirby Star Allies<br /><img src='images/festival_art.png' alt='Festival Kirby' />"]),
-	"Light": new Ability("Light", "'Brighten those dark corners! *Can only be used once.' -Kirby: Nightmare in Dream Land", ["Cool Spook"], ["Kirby's Adventure", " Kirby: Nightmare in Dream Land<br /><img src='images/light_art.png' alt='Light Kirby' />"]),
-	"Magic": new Ability("Magic", "'No telling what will happen when you use it, but... once you use it, you lose it!' -Kirby & The Amazing Mirror", ["<em>Boxy</em>"], ["Kirby & The Amazing Mirror", " Kirby: Squeak Squad<br /><img src='images/magic_art.png' alt='Magic Kirby' />"]),
-	"Mike": new Ability("Mike", "'Yeah! Yeah! Whooooa-oh-oh-oh! There are three songs to sing with resounding enthusiasm! Store up power to pump up the volume. Sing with friends for explosive harmony. Gather multiple singers for a glorious chorus.' -Kirby Star Allies", ["Walky", " <em>Mr. Tick-Tock", " Paint Roller</em>'s microphone"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby Air Ride", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Star Allies<br /><img src='images/mike_art.png' alt='Mike Kirby' />"]),
-	"Paint": new Ability("Paint", "'Now's your chance to use it! A special onetime Copy Ability! Paint the town all of 7 colors!' -Kirby Super Star Ultra", ["Paint Slime", " <em>Chameleo Arm</em>'s paint blobs", " <em>Marx Soul</em>'s paint rain"], ["Kirby Super Star", " Kirby Super Star Ultra<br /><img src='images/paint_art.png' alt='Paint Kirby' />"]),
-	"RobobotArmor": new Ability("RobobotArmor", "'Originally part of the invading robotic army, when Kirby jumps into this machine, it becomes his Robobot Armor—able to change its form by scanning enemy specs!' -Kirby: Planet Robobot", ["Found in various locations around the map"], ["Kirby: Planet Robobot"]),
+	"Cook": new Ability("Cook", "'What's on today's menu? Put all your foes in the pot and stew them to perfection!' -Kirby Super Star Ultra", ["Cookin", " Prank", " <em>Chef Kawasaki</em>"], ["Kirby Super Star", " Kirby & The Amazing Mirror", " Kirby Super Star Ultra", " Kirby Star Allies"]),
+	"Crash": new Ability("Crash", "'DANGER! Use caution when handling this ability. It can only be used once, so make it count!' -Kirby: Planet Robobot", ["Bomber", " Searches", " Scarfy", " Mr. Anglep (Copy)", " <em>Poppy Bros Sr.", " Dark Mind</em>'s bomb", " <em>Paint Roller</em>'s bomb", " <em>Metal General</em>'s huge mistake"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby & The Amazing Mirror", " Kirby: Canvas Curse", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Star Allies"]),
+	"Festival": new Ability("Festival", "'Honk, toot, and bammity-bam! Bust out a festival of drums and horns, which makes everyone break into a wild dance! Gather your all-star friends and have a party!' -Kirby Star Allies", ["Donpuffle", " <em>Yggy Woods</em>'s golden cherries"], ["Kirby Star Allies"]),
+	"Light": new Ability("Light", "'Brighten those dark corners! *Can only be used once.' -Kirby: Nightmare in Dream Land", ["Cool Spook"], ["Kirby's Adventure", " Kirby: Nightmare in Dream Land"]),
+	"Magic": new Ability("Magic", "'No telling what will happen when you use it, but... once you use it, you lose it!' -Kirby & The Amazing Mirror", ["<em>Boxy</em>"], ["Kirby & The Amazing Mirror", " Kirby: Squeak Squad"]),
+	"Mike": new Ability("Mike", "'Yeah! Yeah! Whooooa-oh-oh-oh! There are three songs to sing with resounding enthusiasm! Store up power to pump up the volume. Sing with friends for explosive harmony. Gather multiple singers for a glorious chorus.' -Kirby Star Allies", ["Walky", " <em>Mr. Tick-Tock", " Paint Roller</em>'s microphone"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby Air Ride", " Kirby Super Star Ultra", " Kirby's Return to Dream Land", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Star Allies"]),
+	"Paint": new Ability("Paint", "'Now's your chance to use it! A special onetime Copy Ability! Paint the town all of 7 colors!' -Kirby Super Star Ultra", ["Paint Slime", " <em>Chameleo Arm</em>'s paint blobs", " <em>Marx Soul</em>'s paint rain"], ["Kirby Super Star", " Kirby Super Star Ultra"]),
+	"RobobotArmor": new Ability("RobobotArmor", "'Originally part of the invading robotic army, when Kirby jumps into this machine, it becomes his Robobot Armor - able to change its form by scanning enemy specs!' -Kirby: Planet Robobot", ["Found in various locations around the map"], ["Kirby: Planet Robobot"]),
 	"Sleep": new Ability("Sleep", "'Sleep is definitely important, but it can be dangerous if you drop off in the wrong place! Luckily, you can wake up quickly by button mashing.' -Kirby: Planet Robobot", ["Noddy", " <em>Heavy Mole</em>'s Red Dygclops", " <em>Wiz</em>'s apple"], ["Kirby's Adventure", " Kirby Super Star", " Kirby: Nightmare in Dream Land", " Kirby Air Ride", " Kirby & The Amazing Mirror", " Kirby: Squeak Squad", " Kirby Super Star Ultra", " Kirby's Return to Dreamland", " Kirby Triple Deluxe", " Kirby: Planet Robobot", " Kirby Battle Royale", " Kirby Star Allies"]),
 	"WheelieRider": new Ability("WheelieRider", "'Hop on your bike, Wheelie Rider! Go for a drive with a friend. Use teamwork to roll ahead!' -Kirby Super Star Ultra", ["Jump onto a Wheelie Bike helper"], ["Kirby Super Star", " Kirby Super Star Ultra"])
 };
@@ -111,36 +116,138 @@ var final_abil = {
 	"TripleStar": new Ability("TripleStar", "'What else needs saying?<br /><strong>TRIPLE STAR</strong><br />That's what you are. Amazing!' -Kirby: Squeak Squad", ["Optional final weapon"], ["Kirby: Squeak Squad"])
 };
 
+var mix64_abil = {
+	"SuperFireball": new Ability("SuperFireball", "'Kirby forms a giant flame bird that streaks across the sky, destroying all enemies in its path. Be careful where the power quits, though. You don't want to fall into an enemy or a dangerous surface.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Burning"], ["Kirby 64: The Crystal Shards"]),
+	"Volcano": new Ability("Volcano", "'Kirby transforms into the world's smallest active volcano, shooting out lava rocks at his enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Stone"], ["Kirby 64: The Crystal Shards"]),
+	"MeltingIceBlock": new Ability("MeltingIceBlock", "'Kirby becomes a giant ice cube that immediately melts and vaporizes.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Ice"], ["Kirby 64: The Crystal Shards"]),
+	"FlamingArrow": new Ability("FlamingArrow", "'Kirby transforms into a bow that shoots flaming arrows. The arrows go farther the longer you hold B.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Needle"], ["Kirby 64: The Crystal Shards"]),
+	"Fireworks": new Ability("Fireworks", "'Kirby shoots off fireworks from his body. The longer you press B, the more fireworks he sends out.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Bomb"], ["Kirby 64: The Crystal Shards"]),
+	"Match": new Ability("Match", "'Kirby pulls out a piece of cellophane and rubs it on his head until he catches fire. Once he's on fire, he runs back and forth, destroying his enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Spark"], ["Kirby 64: The Crystal Shards"]),
+	"SwordOfFire": new Ability("SwordOfFire", "'Kirby spits out a flaming sword that he can use against enemies and obstacles. To put the sword away, press up then B.' -Kirby 64: The Crystal Shards official strategy guide", ["Burning + Cutter"], ["Kirby 64: The Crystal Shards"]),
+	"GiantStone": new Ability("GiantStone", "'Kirby takes the shape of a giant boulder. He can still walk and jump a little distance, but his most spectacular power is his explosion when you press B.' -Kirby 64: The Crystal Shards official strategy guide", ["Stone + Stone"], ["Kirby 64: The Crystal Shards"]),
+	"CurlingStone": new Ability("CurlingStone", "'Kirby takes the shape of a curling hammer, great for moving across large areas filled with enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Stone + Ice"], ["Kirby 64: The Crystal Shards"]),
+	"Drill": new Ability("Drill", "'Kirby shoots a drill to the left or right, which he can either let go of or hold onto.' -Kirby 64: The Crystal Shards official strategy guide", ["Stone + Needle"], ["Kirby 64: The Crystal Shards"]),
+	"Dynamite": new Ability("Dynamite", "'Like the single bomb power, Kirby tosses dynamite. Be very careful though. The explosions are very large and can damage Kirby unless he's far away. Press down to make Kirby put on the helmet and avoid the explosion.' -Kirby 64: The Crystal Shards official strategy guide", ["Stone + Bomb"], ["Kirby 64: The Crystal Shards"]),
+	"LightningBoulder": new Ability("LightningBoulder", "'A giant electrified boulder swings out from Kirby and circles around as he moves, destroying all enemies. Press B to make the rock explode.' -Kirby 64: The Crystal Shards official strategy guide", ["Stone + Spark"], ["Kirby 64: The Crystal Shards"]),
+	"AnimalStatues": new Ability("AnimalStatues", "'Kirby turns into random stone animals, like fish and birds, that are heavy and indestructible.' -Kirby 64: The Crystal Shards official strategy guide", ["Stone + Cutter"], ["Kirby 64: The Crystal Shards"]),
+	"RollingSnowball": new Ability("RollingSnowball", "'Kirby forms a giant snowball that engulfs all enemies as it rolls along. When Kirby hits an obstacle or when you press B, the snowball explodes, destroying all the trapped enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Ice + Ice"], ["Kirby 64: The Crystal Shards"]),
+	"GiantSpinySnowflake": new Ability("GiantSpinySnowflake", "'Kirby turns into a giant ice crystal, destroying any enemy that's too close to his pointy spikes.' -Kirby 64: The Crystal Shards official strategy guide", ["Ice + Needle"], ["Kirby 64: The Crystal Shards"]),
+	"ExplosiveSnowman": new Ability("ExplosiveSnowman", "'Kirby is coated with snow, forming a snowman with a fuse burning at the top of his head. When the fuse burns out, he explodes, destroying nearby enemies and obstacles. Ice + bomb will also explode if Kirby runs and jumps into an enemy.' -Kirby 64: The Crystal Shards official strategy guide", ["Ice + Bomb"], ["Kirby 64: The Crystal Shards"]),
+	"Refrigerator": new Ability("Refrigerator", "'Kirby turns into a refrigerator. Pressing the B Button again opens the door and food items fly out, destroying enemies. Kirby can then eat the food that isn't destroyed to regain vitality.' -Kirby 64: The Crystal Shards official strategy guide", ["Ice + Spark"], ["Kirby 64: The Crystal Shards"]),
+	"IceSkating": new Ability("IceSkating", "'Kirby straps on his ice skates and skates across the landscape. Press A while he's skating to see a world-class jump.' -Kirby 64: The Crystal Shards official strategy guide", ["Ice + Cutter"], ["Kirby 64: The Crystal Shards"]),
+	"SwissArmy": new Ability("SwissArmy", "'Kirby shoots out all kinds of sharp stuff, from a bumblebee stinger to a compass point and a cactus. This super power is very effective against large groups of enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Needle + Needle"], ["Kirby 64: The Crystal Shards"]),
+	"SpikeBomb": new Ability("SpikeBomb", "'Kirby turns into a spiked mine that looks like the Gordo enemies found in the game.' -Kirby 64: The Crystal Shards official strategy guide", ["Needle + Bomb"], ["Kirby 64: The Crystal Shards"]),
+	"LightningRod": new Ability("LightningRod", "'Kirby becomes a short lightning rod that fires off a bolt of electricity, zapping enemies who may have wandered too close.' -Kirby 64: The Crystal Shards official strategy guide", ["Needle + Spark"], ["Kirby 64: The Crystal Shards"], true),
+	"GiantClaws": new Ability("GiantClaws", "'Kirby's normally stubby arms turn into giant jaws with teeth that snap shut on enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Needle + Cutter"], ["Kirby 64: The Crystal Shards"]),
+	"Tri-MissileAttack": new Ability("Tri-MissileAttack", "'Kirby fires homing rockets from his mouth. He fires from one to three rockets, depending on how long you hold B.' -Kirby 64: The Crystal Shards official strategy guide", ["Bomb + Bomb"], ["Kirby 64: The Crystal Shards"]),
+	"LightBulb": new Ability("LightBulb", "'Kirby becomes a small light bulb, burning brightly. Eventually, he burns too brightly and explodes, destroying nearby enemies.' -Kirby 64: The Crystal Shards official strategy guide", ["Bomb + Spark"], ["Kirby 64: The Crystal Shards"]),
+	"ExplosiveNinjaStars": new Ability("ExplosiveNinjaStars", "'Kirby can throw ninja stars that detonate after sticking into enemies or walls.' -Kirby 64: The Crystal Shards official strategy guide", ["Bomb + Cutter"], ["Kirby 64: The Crystal Shards"]),
+	"SuperElectricEnergyField": new Ability("SuperElectricEnergyField", "'By meditating, Kirby surrounds himself with a giant ball of electricity that no enemy can withstand. The ball shrinks a little when Kirby walks with it, so be careful.' -Kirby 64: The Crystal Shards official strategy guide", ["Spark + Spark"], ["Kirby 64: The Crystal Shards"]),
+	"Double-BladedLaserSword": new Ability("Double-BladedLaserSword", "'Kirby uses a double-bladed light sword— a very cool weapon. Press down to turn it off.' -Kirby 64: The Crystal Shards official strategy guide", ["Spark + Cutter"], ["Kirby 64: The Crystal Shards"]),
+	"SuperBoomerang": new Ability("SuperBoomerang", "'The small boomerang is replaced by a giant boomerang with saw-like teeth, which rips through the ground, walls, and enemies. It's very effective at clearing out enemies in your way.' -Kirby 64: The Crystal Shards official strategy guide", ["Cutter + Cutter"], ["Kirby 64: The Crystal Shards"])
+};
+
 var norm_div = document.getElementById("norm_abil");
 var limit_div = document.getElementById("limit_abil");
 var super_div = document.getElementById("super_abil");
 var final_div = document.getElementById("final_abil");
+var mix64_div = document.getElementById("mix64_abil");
+var mixDS_div = document.getElementById("mixDS_abil");
 
+var normaltext, smalltext;
 var abil;
 for (abil in norm_abil) {
-	norm_div.innerHTML += `<span class="popup" onclick="norm_abil['` + norm_abil[abil].name + `'].print();">
+	normaltext = (`<span class="popup" onclick="norm_abil['` + norm_abil[abil].name + `'].print();">
 		<img src="images/` + norm_abil[abil].name + `.png" alt="` + norm_abil[abil].name + ` icon" width="150" />
 		<span class="popuptext" id="` + norm_abil[abil].name + `"></span>
-	</span>`;
+		</span>`)
+	smalltext = (`<span class="popup" onclick="norm_abil['` + norm_abil[abil].name + `'].print();">
+		<img src="images/` + norm_abil[abil].name + `.png" alt="` + norm_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext smalltext" id="` + norm_abil[abil].name + `"></span>
+		</span>`)
+	if (norm_abil[abil].smalltext == true) {
+		norm_div.innerHTML += smalltext;
+	} else {
+		norm_div.innerHTML += normaltext;
+	}
 }
 
 for (abil in limit_abil) {
-	limit_div.innerHTML += `<span class="popup" onclick="limit_abil['` + limit_abil[abil].name + `'].print();">
+	normaltext = (`<span class="popup" onclick="limit_abil['` + limit_abil[abil].name + `'].print();">
 		<img src="images/` + limit_abil[abil].name + `.png" alt="` + limit_abil[abil].name + ` icon" width="150" />
 		<span class="popuptext" id="` + limit_abil[abil].name + `"></span>
-	</span>`;
+		</span>`)
+	smalltext = (`<span class="popup" onclick="limit_abil['` + limit_abil[abil].name + `'].print();">
+		<img src="images/` + limit_abil[abil].name + `.png" alt="` + limit_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext smalltext" id="` + limit_abil[abil].name + `"></span>
+		</span>`)
+	if (limit_abil[abil].smalltext == true) {
+		limit_div.innerHTML += smalltext;
+	} else {
+		limit_div.innerHTML += normaltext;
+	}
 }
 
 for (abil in super_abil) {
-	super_div.innerHTML += `<span class="popup" onclick="super_abil['` + super_abil[abil].name + `'].print();">
+	normaltext = (`<span class="popup" onclick="super_abil['` + super_abil[abil].name + `'].print();">
 		<img src="images/` + super_abil[abil].name + `.png" alt="` + super_abil[abil].name + ` icon" width="150" />
 		<span class="popuptext" id="` + super_abil[abil].name + `"></span>
-	</span>`;
+		</span>`)
+	smalltext = (`<span class="popup" onclick="super_abil['` + super_abil[abil].name + `'].print();">
+		<img src="images/` + super_abil[abil].name + `.png" alt="` + super_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext smalltext" id="` + super_abil[abil].name + `"></span>
+		</span>`)
+	if (super_abil[abil].smalltext == true) {
+		super_div.innerHTML += smalltext;
+	} else {
+		super_div.innerHTML += normaltext;
+	}
 }
 
 for (abil in final_abil) {
-	final_div.innerHTML += `<span class="popup" onclick="final_abil['` + final_abil[abil].name + `'].print();">
+	normaltext = (`<span class="popup" onclick="final_abil['` + final_abil[abil].name + `'].print();">
 		<img src="images/` + final_abil[abil].name + `.png" alt="` + final_abil[abil].name + ` icon" width="150" />
 		<span class="popuptext" id="` + final_abil[abil].name + `"></span>
-	</span>`;
+		</span>`)
+	smalltext = (`<span class="popup" onclick="final_abil['` + final_abil[abil].name + `'].print();">
+		<img src="images/` + final_abil[abil].name + `.png" alt="` + final_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext smalltext" id="` + final_abil[abil].name + `"></span>
+		</span>`)
+	if (final_abil[abil].smalltext == true) {
+		final_div.innerHTML += smalltext;
+	} else {
+		final_div.innerHTML += normaltext;
+	}
+}
+
+for (abil in mix64_abil) {
+	normaltext = (`<span class="popup" onclick="mix64_abil['` + mix64_abil[abil].name + `'].print();">
+		<img src="images/` + mix64_abil[abil].name + `.png" alt="` + mix64_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext" id="` + mix64_abil[abil].name + `"></span>
+		</span>`)
+	smalltext = (`<span class="popup" onclick="mix64_abil['` + mix64_abil[abil].name + `'].print();">
+		<img src="images/` + mix64_abil[abil].name + `.png" alt="` + mix64_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext smalltext" id="` + mix64_abil[abil].name + `"></span>
+		</span>`)
+	if (mix64_abil[abil].smalltext == true) {
+		mix64_div.innerHTML += smalltext;
+	} else {
+		mix64_div.innerHTML += normaltext;
+	}
+}
+
+for (abil in mixDS_abil) {
+	normaltext = (`<span class="popup" onclick="mixDS_abil['` + mixDS_abil[abil].name + `'].print();">
+		<img src="images/` + mixDS_abil[abil].name + `.png" alt="` + mixDS_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext" id="` + mixDS_abil[abil].name + `"></span>
+		</span>`)
+	smalltext = (`<span class="popup" onclick="mixDS_abil['` + mixDS_abil[abil].name + `'].print();">
+		<img src="images/` + mixDS_abil[abil].name + `.png" alt="` + mixDS_abil[abil].name + ` icon" width="150" />
+		<span class="popuptext smalltext" id="` + mixDS_abil[abil].name + `"></span>
+		</span>`)
+	if (mixDS_abil[abil].smalltext == true) {
+		mixDS_div.innerHTML += smalltext;
+	} else {
+		mixDS_div.innerHTML += normaltext;
+	}
 }
