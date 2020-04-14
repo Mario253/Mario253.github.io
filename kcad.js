@@ -147,12 +147,20 @@ var mix64_abil = {
 	"SuperBoomerang": new Ability("SuperBoomerang", "'The small boomerang is replaced by a giant boomerang with saw-like teeth, which rips through the ground, walls, and enemies. It's very effective at clearing out enemies in your way.' -Kirby 64: The Crystal Shards official strategy guide", ["Cutter + Cutter"], ["Kirby 64: The Crystal Shards"])
 };
 
+var mixDS_abil = {
+	"FireSword": new Ability("FireSword", "'CUT Can't be used in water.' -Kirby: Squeak Squad", ["Fire + Sword"], ["Kirby: Squeak Squad"]),
+	"IceBomb": new Ability("IceBomb", "No description", ["Ice + Bomb"], ["Kirby: Squeak Squad"]),
+	"IceSword": new Ability("IceSword", "'CUT Can't be used in water.' -Kirby: Squeak Squad", ["Ice + Sword"], ["Kirby: Squeak Squad"]),
+	"ThunderBomb": new Ability("ThunderBomb", "No description", ["Spark + Bomb"], ["Kirby: Squeak Squad"]),
+	"ThunderSword": new Ability("ThunderSword", "'CUT Can't be used in water.' -Kirby: Squeak Squad", ["Spark + Sword"], ["Kirby: Squeak Squad"])
+}
+
 var norm_div = document.getElementById("norm_abil");
 var limit_div = document.getElementById("limit_abil");
 var super_div = document.getElementById("super_abil");
 var final_div = document.getElementById("final_abil");
 var mix64_div = document.getElementById("mix64_abil");
-// var mixDS_div = document.getElementById("mixDS_abil");
+var mixDS_div = document.getElementById("mixDS_abil");
 
 var normaltext, smalltext;
 var abil;
@@ -236,7 +244,6 @@ for (abil in mix64_abil) {
 	}
 }
 
-/*
 for (abil in mixDS_abil) {
 	normaltext = (`<span class="popup" onclick="mixDS_abil['` + mixDS_abil[abil].name + `'].print();">
 		<img src="images/` + mixDS_abil[abil].name + `.png" alt="` + mixDS_abil[abil].name + ` icon" width="150" />
@@ -252,4 +259,3 @@ for (abil in mixDS_abil) {
 		mixDS_div.innerHTML += normaltext;
 	}
 }
-*/
